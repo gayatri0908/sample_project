@@ -1,0 +1,436 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+header {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.logo {
+    color: #f5c542;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #f5c542;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    height: 90vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    background: #f5c542;
+    color: #111;
+
+    padding: 13px 28px;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+/* =========================
+   Common Sections
+========================= */
+
+section {
+    padding: 70px 5%;
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.section-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   Rooms
+========================= */
+
+.rooms {
+    background: #fff;
+}
+
+.room-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.room-info h4 {
+    color: #c49a00;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.room-info button,
+#bookingForm button {
+    background: #111;
+    color: white;
+
+    border: none;
+    padding: 12px 20px;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.room-info button:hover,
+#bookingForm button:hover {
+    background: #f5c542;
+    color: #111;
+}
+
+/* =========================
+   Services
+========================= */
+
+.services {
+    background: #f5f5f5;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card span {
+    font-size: 40px;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+}
+
+/* =========================
+   About
+========================= */
+
+.about {
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    color: #f5c542;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   Contact
+========================= */
+
+.contact {
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contact-container div {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.contact-container h3 {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   Booking Form
+========================= */
+
+#bookingForm {
+    max-width: 600px;
+    margin: 40px auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+#bookingForm button {
+    font-size: 16px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 90%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #111;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 75vh;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
